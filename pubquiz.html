@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+<link rel="icon" href="">
+
+
+
+
+
+
+<style>
+
+.button-wrapper a {
+    width: 400px;
+}
+
+.button-wrapper a.button1.a {
+    width: 300px;
+    text-align: center;
+}
+
+
+
+a.button1{
+display:inline-block;
+padding:0.35em 1.2em;
+border:0.15em solid #ffffff;
+margin:0 0.3em 0.3em 0;
+border-radius:0.4em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:500;
+color:#ffffff;
+text-align:center;
+transition: all 0.2s;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+font-size:40px;
+}
+a.button1:hover{
+color:#ffffff;
+background-color:#000000;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+@media all and (max-width:30em){
+a.button1{
+display:block;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+margin:0.4em auto;
+ }
+}
+
+
+
+html, body {
+  width: 100%;
+  height:100%;
+}
+
+body {
+    background: linear-gradient(-45deg, #6e3b9e, #868686, #6e3b9e, #868686 , #6e3b9e);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+	text-align: center;
+	overflow-y: hidden;
+  overflow-x: hidden;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+
+img {
+  max-width: 100%;
+}
+
+.image {
+  flex-basis: 10%
+}
+
+.text {
+  font-size: 20px;
+  padding-left: px;
+}
+
+.image2 {
+  flex-basis: 1.5%
+}
+
+
+#myButton {
+
+font-size: 50px;
+
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    
+
+</style>
+</head>
+
+<body>
+
+    <a id="myButton" href="#">
+    Click here to get a question
+</a>
+
+<div id="myRandomDiv">
+</div>
+
+
+<h1>Rules</h1>
+<p>1. Make a buzzer noise if you want to answer a question <br> 
+    2. You have 10 seconds to answer the question <br> 
+    3. If you answer Wrong, you lose a point <br>
+    4. You can pass the question, but if answered right by another player, they get two points <br>
+
+</p>
+</body>
+
+
+<script type="text/javascript" charset="utf-8">
+    var randomStrings = [
+        "How many time zones are there in Russia? (11)",
+        "What’s the national flower of Japan? (Cherry blossom)",
+        "How many days does it take for the Earth to orbit the Sun? (365)", 
+        "What country has the most islands in the world? (Sweden, over 220,000!)",
+        "What’s the smallest country in the world? (The Vatican)",
+        "Where is the lowest natural place on planet Earth? (The Mariana Trench, 11,034m)",
+        "Name the longest river in the world? (The Nile, 6650km)",
+        "Which player scored the fastest hat-trick in the Premier League? (Sadio Mane)",
+        "With 260 goals, who is the Premier League's all-time top scorer?(Alan Shearer)",
+        "When was Netflix founded: 1997, 2001, 2009, 2015? (1997)",
+        "What was the most-watched series on Netflix in 2019? (Stranger Things)",
+        "Which driver has won the most Formula 1 championships? (Michael Schumacher)",
+        "How many keys does a classic piano have? (88)",
+        "What city do The Beatles come from? (Liverpool)",
+        "When did they open the London underground? (1863)",
+        "What is the all-time most-streamed song on Spotify to date? (Ed Sheeran, The Shape of You)",
+        "Which famous graffiti artist comes from Bristol? (Banksy)",
+        "Name the best-selling book series of the 21st century? (Harry Potter, J. K. Rowling)",
+        "In which European city will the Olympic Summer Games of 2024 take place? (Paris)",
+        "In medicine, how is the 'Carpal' region of the body more commonly known? (Wrist)",
+        "In which European country would you find Chopin Airport? (Poland)",
+        "What colour is the star on the flag of Vietnam? (Yellow)",
+        "In which British city would you find the 'Serpentine Gallery'? (London) ",
+        "What comes next in the sequence 1,1,2,3,5? (8)",
+        "How many players are in a netball team? (7)",
+        "Augustus was the first emperor of where? (Rome)",
+        "What Single Rider Has Won The Most Stages At The Tour de France? (Eddy Mercx)",
+        "Chris Froome has won 7 grand tours, but how many grand tour stages has he won? (10 stages)",
+        "What is the English equivalent for the item that Americans would call a Thumb Tack? (Drawing Pin)",
+        "What does the French cooking term ‘au beurre’ mean? (Cooked in butter)",
+        "Olympus Mons is the highest mountain in our Solar System, where can it be found? (Mars)",
+        "When you get treated the same way that you have treated others, then you get a what of your own what? (A taste of your own medicine)",
+        "Little Gem is a variety of apple. (False)",
+        "In the computer term ‘SQL’ what does the Q stand for? (Query)",
+        " In medicine what does the term Vascular relate to? (Blood vessels)",
+        "Which cartoon character has a catchphrase of ‘Ay caramba!’ (Bart Simpson)",
+        "What is the term for the smallest unit of data managed by a computer? (Bit)",
+        "Two teams played in the 2018 World Cup for the first time, name both? (Iceland and Panama)",
+        "How many times have Holland played in the World Cup Final? (3)",
+        "What are resources owned by a business called? (Assests)",
+        "What are the factors that a business owes or needs to pay called? (Liabilities)",
+        "The animal with the longest life span is a species of what? (Tortoise)",
+        "Which country has the largest coastline? (Canada)",
+        "As of 2021, how many men have walked on the Moon? (12)",
+        "What substance was included in Coca-Cola drinks until 1903? (Cocaine)",
+        "How many cities are there in England? (51)",
+        "How many years would you have been married if you were celebrating your Sapphire anniversary? (45)",
+        " Which was the last British city to be named the European Capital of Culture? (Liverpool)",
+
+    ];
+
+
+
+    var randomDiv = document.getElementById("myRandomDiv");
+
+    document.getElementById("myButton").addEventListener("click", function() {
+          randomIndex = Math.ceil((Math.random()*randomStrings.length-1));
+          newText = randomStrings[randomIndex];
+          randomDiv.innerHTML = newText;
+    });
+</script>    
+
+
+
+
+
+
+
+
+<script>
+  $('body').append('<div style="" id="loadingDiv"><div class="loader">Loading...</div></div>');
+$(window).on('load', function(){
+  setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
+});
+function removeLoader(){
+    $( "#loadingDiv" ).fadeOut(500, function() {
+      // fadeOut complete. Remove the loading div
+      $( "#loadingDiv" ).remove(); //makes page more lightweight 
+  });  
+}
+  
+  </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+    setTimeout(function(){
+      showImage();
+      setInterval(hideImage, 7000);
+    },3000);
+  });
+  function hideImage(){
+    document.getElementById( "imgHideShow" ).style.display = "none" ;
+  }
+  function showImage(){
+    document.getElementById( "imgHideShow" ).style.display = "block" ;
+  }
+</script>
+
+<script type="text/javascript">
+<!--
+if (screen.width <= 699) {
+document.location = "mobile.html";
+}
+//-->
+</script>
+
+
+<script>msg = " Lakes Games ";
+msg = "Lakes Games" + msg;position = 0;
+function scrolltitle() {
+document.title = msg.substring(position, msg.length) + msg.substring(0, position); position++;
+if (position > msg.length) position = 0
+window.setTimeout("scrolltitle()",170);
+}
+scrolltitle();</script>
+
+
+
+
+
+</html>
