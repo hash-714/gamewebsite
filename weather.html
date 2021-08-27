@@ -99,6 +99,26 @@ img {
   flex-basis: 1.5%
 }
 
+#my-div
+{
+    width    : 1900px;
+    height   : 700px;
+    overflow : hidden;
+    position : relative;
+    text-align: center;
+    
+}
+
+#my-iframe
+{
+    position : absolute;
+    top      : -262px;
+    left     : 100px;
+    width    : 1280px;
+    height   : 1200px;
+    padding-left: 500px;
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -115,26 +135,9 @@ img {
 
 <body>
 
-<img src="lakesgames.png" alt="Lemmon logo" width="80%" height="55%">
-
-
-<div class="button-wrapper">
-
-<a href="passwordlogin.html" class="button1">Pub Quiz</a>
-<a href="weather.html" class="button1" "target="_blank">Ambleside Weather</a>
+    <div id="my-div">
+<iframe src="https://www.metoffice.gov.uk/weather/forecast/gctvssktt#?date=2021-08-27" id="my-iframe" scrolling="no"></iframe>
 </div>
-
-<div class="button-wrapper">
-<a href="https://www.theaa.com/route-planner/traffic-news/Ambleside" class="button1" "target="_blank">Ambleside Traffic</a>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
 
 </body>
 
