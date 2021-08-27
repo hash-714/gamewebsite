@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+<link rel="icon" href="">
+
+
+
+
+
+
+<style>
+
+.button-wrapper a {
+    width: 400px;
+}
+
+.button-wrapper a.button1.a {
+    width: 300px;
+    text-align: center;
+}
+
+
+
+a.button1{
+display:inline-block;
+padding:0.35em 1.2em;
+border:0.15em solid #ffffff;
+margin:0 0.3em 0.3em 0;
+border-radius:0.4em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:500;
+color:#ffffff;
+text-align:center;
+transition: all 0.2s;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+font-size:40px;
+}
+a.button1:hover{
+color:#ffffff;
+background-color:#000000;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+@media all and (max-width:30em){
+a.button1{
+display:block;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+margin:0.4em auto;
+ }
+}
+
+
+
+html, body {
+  width: 100%;
+  height:100%;
+}
+
+body {
+    background: linear-gradient(-45deg, #6e3b9e, #868686, #6e3b9e, #868686 , #6e3b9e);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+	text-align: center;
+	overflow-y: hidden;
+  overflow-x: hidden;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+
+img {
+  max-width: 100%;
+}
+
+.image {
+  flex-basis: 10%
+}
+
+.text {
+  font-size: 20px;
+  padding-left: px;
+}
+
+.image2 {
+  flex-basis: 1.5%
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    
+
+</style>
+</head>
+
+<body>
+
+<img src="lakesgames.png" alt="Lemmon logo" width="50%" height="50%">
+
+
+<div class="button-wrapper">
+
+<a href="pubquiz.html" class="button1">Pub Quiz</a>
+<a href="https://discord.gg/ZZYvRJw6vQ" class="button1">Discord</a>
+</div>
+<br>
+<div class="button-wrapper">
+<a href="annoucements.html" class="button1">Annoucements</a>
+</div>
+
+
+</body>
+
+<script>
+  $('body').append('<div style="" id="loadingDiv"><div class="loader">Loading...</div></div>');
+$(window).on('load', function(){
+  setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
+});
+function removeLoader(){
+    $( "#loadingDiv" ).fadeOut(500, function() {
+      // fadeOut complete. Remove the loading div
+      $( "#loadingDiv" ).remove(); //makes page more lightweight 
+  });  
+}
+  
+  </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+    setTimeout(function(){
+      showImage();
+      setInterval(hideImage, 7000);
+    },3000);
+  });
+  function hideImage(){
+    document.getElementById( "imgHideShow" ).style.display = "none" ;
+  }
+  function showImage(){
+    document.getElementById( "imgHideShow" ).style.display = "block" ;
+  }
+</script>
+
+<script type="text/javascript">
+<!--
+if (screen.width <= 699) {
+document.location = "mobile.html";
+}
+//-->
+</script>
+
+
+<script>msg = " Lakes Games ";
+msg = "Lakes Games" + msg;position = 0;
+function scrolltitle() {
+document.title = msg.substring(position, msg.length) + msg.substring(0, position); position++;
+if (position > msg.length) position = 0
+window.setTimeout("scrolltitle()",170);
+}
+scrolltitle();</script>
+
+
+
+
+
+</html>
